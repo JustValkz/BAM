@@ -59,7 +59,7 @@ function Start-BAMKeyAnalysis {
     $ListView.Items.Clear()
     $ProgressBar.Value = 10
 
-    # ----- [MUI Cache - HKCU] -----
+    # muicache
     $MuiCacheKey = "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\MuiCache"
     try {
         $MuiProps = Get-ItemProperty -Path $MuiCacheKey | Select-Object -Property * -ErrorAction Stop
@@ -85,7 +85,7 @@ function Start-BAMKeyAnalysis {
 
     $ProgressBar.Value = 50
 
-    # ----- [BAM Key - HKLM] -----
+    
     $bamBasePath = "HKLM:\SYSTEM\CurrentControlSet\Services\bam\State"
     $userSettingsPath = Join-Path $bamBasePath "UserSettings"
     
