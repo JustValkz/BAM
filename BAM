@@ -80,7 +80,7 @@ function Start-BAMKeyAnalysis {
             }
         }
     } catch {
-        # Silently ignore MuiCache parse failures
+        # ignore muicahche failures bc its retarded
     }
 
     $ProgressBar.Value = 50
@@ -127,7 +127,7 @@ function Start-BAMKeyAnalysis {
                 }
             }
         } catch {
-            # Silently ignore BAM key failures
+            # ignores bam key failrues bc its retared
         }
     }
 
